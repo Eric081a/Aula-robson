@@ -13,10 +13,7 @@ document
         output.textContent = "";
         setLoading(true);
         try {
-
-
-
-
+// fetch retorna uma promise que resolve para response
             const res = await fetch(url, { method: "GET" });
             if (!res.ok) throw new Error("Status HTTP: " + res.status);
             const data = await res.json(); //parse JSON automaticamente
@@ -26,4 +23,4 @@ document
             output.classList.add("Error");
         } finally {
             setLoading(false);
-       } c  });
+       }  });
